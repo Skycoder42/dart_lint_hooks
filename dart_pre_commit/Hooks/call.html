@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the call method from the Hooks class, for the Dart programming language.">
+  <title>call method - Hooks class - dart_pre_commit library - Dart API</title>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../../static-assets/github.css">
+  <link rel="stylesheet" href="../../static-assets/styles.css">
+  <link rel="icon" href="../../static-assets/favicon.png">
+
+</head>
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">dart_pre_commit</a></li>
+    <li><a href="../../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
+    <li><a href="../../dart_pre_commit/Hooks-class.html">Hooks</a></li>
+    <li class="self-crumb">call method</li>
+  </ol>
+  <div class="self-name">call</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="../../index.html">dart_pre_commit</a></li>
+      <li><a href="../../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
+      <li><a href="../../dart_pre_commit/Hooks-class.html">Hooks</a></li>
+      <li class="self-crumb">call method</li>
+    </ol>
+    
+    <h5>Hooks class</h5>
+    <ol>
+    
+        <li class="section-title"><a href="../../dart_pre_commit/Hooks-class.html#constructors">Constructors</a></li>
+        <li><a href="../../dart_pre_commit/Hooks/Hooks.internal.html">internal</a></li>
+    
+        <li class="section-title">
+            <a href="../../dart_pre_commit/Hooks-class.html#instance-properties">Properties</a>
+        </li>
+        <li><a href="../../dart_pre_commit/Hooks/continueOnError.html">continueOnError</a></li>
+        <li class="inherited"><a href="https://api.dart.dev/stable/2.10.1/dart-core/Object/hashCode.html">hashCode</a></li>
+        <li><a href="../../dart_pre_commit/Hooks/logger.html">logger</a></li>
+        <li class="inherited"><a href="https://api.dart.dev/stable/2.10.1/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    
+        <li class="section-title"><a href="../../dart_pre_commit/Hooks-class.html#instance-methods">Methods</a></li>
+        <li><a href="../../dart_pre_commit/Hooks/call.html">call</a></li>
+        <li class="inherited"><a href="https://api.dart.dev/stable/2.10.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+        <li class="inherited"><a href="https://api.dart.dev/stable/2.10.1/dart-core/Object/toString.html">toString</a></li>
+    
+        <li class="section-title inherited"><a href="../../dart_pre_commit/Hooks-class.html#operators">Operators</a></li>
+        <li class="inherited"><a href="https://api.dart.dev/stable/2.10.1/dart-core/Object/operator_equals.html">operator ==</a></li>
+    
+    
+        <li class="section-title"><a href="../../dart_pre_commit/Hooks-class.html#static-methods">Static methods</a></li>
+        <li><a href="../../dart_pre_commit/Hooks/create.html">create</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-method">call</span> method </h1></div>
+
+    <section class="multi-line-signature">
+      <span class="returntype"><a href="https://api.dart.dev/stable/2.10.1/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../dart_pre_commit/HookResult-class.html">HookResult</a></span>&gt;</span></span>
+            <span class="name ">call</span>
+(<wbr>)
+      
+    </section>
+    <section class="desc markdown">
+      <p>Executes all enabled hooks on the current repository.</p>
+<p>The command will run expecting <a href="https://api.dart.dev/stable/2.10.1/dart-io/Directory/current.html">Directory.current</a> to be the git
+repository to be processed. It collects all staged files and then runs all
+enabled hooks on these files. See <a href="../../dart_pre_commit/Hooks/create.html">Hooks.create()</a> for more details on
+what hooks are available and how to configure this instance.</p>
+<p>The result is determined based on the collective result of all processed
+files and hooks. A <a href="../../dart_pre_commit/HookResult-class.html">HookResult.clean</a> result is only possible if all
+operations are clean. If at least one staged file had to modified, the
+result is <a href="../../dart_pre_commit/HookResult-class.html">HookResult.hasChanges</a>. If at least one file was partially
+staged, it will be <a href="../../dart_pre_commit/HookResult-class.html">HookResult.hasUnstagedChanges</a> instead. The
+<a href="../../dart_pre_commit/HookResult-class.html">HookResult.linter</a> will be the result if the analyzer finds at least one
+file with problems, regardless of error-level or whether files have
+already been modified by other hooks. <a href="../../dart_pre_commit/HookResult-class.html">HookResult.error</a> trumps all other
+results, as at least one error means that the operation has failed.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Future&lt;HookResult&gt; call() async {
+  try {
+    var lintState = HookResult.clean;
+    final files = await _collectFiles();
+
+    for (final entry in files.entries) {
+      final file = File(entry.key);
+      try {
+        logger.log(&quot;Scanning ${file.path}...&quot;);
+        var modified = false;
+        if (_fixImports != null) {
+          modified = await _fixImports(file) || modified;
+        }
+        if (_format != null) {
+          modified = await _format(file) || modified;
+        }
+
+        if (modified) {
+          if (entry.value) {
+            logger.log(&quot;(!) Fixing up partially staged file ${file.path}&quot;);
+            lintState = lintState._raiseTo(HookResult.hasUnstagedChanges);
+          } else {
+            logger.log(&quot;Fixing up ${file.path}&quot;);
+            lintState = lintState._raiseTo(HookResult.hasChanges);
+            await _git([&quot;add&quot;, file.path]).drain&lt;void&gt;();
+          }
+        }
+      } on TaskError catch (error) {
+        logger.logError(error);
+        if (!continueOnError) {
+          return HookResult.error;
+        } else {
+          lintState = lintState._raiseTo(HookResult.error);
+        }
+      }
+    }
+
+    if (_analyze != null) {
+      if (await _analyze(files.keys)) {
+        lintState = lintState._raiseTo(HookResult.linter);
+      }
+    }
+
+    return lintState;
+  } on TaskError catch (error) {
+    logger.logError(error);
+    return HookResult.error;
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dart_pre_commit
+      1.0.0
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../../static-assets/typeahead.bundle.min.js"></script>
+<script src="../../static-assets/highlight.pack.js"></script>
+<script src="../../static-assets/URI.js"></script>
+<script src="../../static-assets/script.js"></script>
+
+
+</body>
+
+</html>

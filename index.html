@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 0.32.4">
+  <meta name="description" content="dart_pre_commit API docs, for the Dart programming language.">
+  <title>dart_pre_commit - Dart API docs</title>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+</head>
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/Skycoder42/dart_pre_commit">dart_pre_commit package</a></li>
+  </ol>
+  <div class="self-name">dart_pre_commit</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="https://github.com/Skycoder42/dart_pre_commit">dart_pre_commit package</a></li>
+    </ol>
+    
+    <h5 class="hidden-xs"><span class="package-name">dart_pre_commit</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
+          <li><a href="dart_pre_commit_bin/dart_pre_commit_bin-library.html">dart_pre_commit_bin</a></li>
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <section class="desc markdown">
+        <h1 id="dart_pre_commit">dart_pre_commit</h1>
+<p><a href="https://github.com/Skycoder42/dart_pre_commit/actions?query=workflow%3A%22Continous+Integration%22"><img src="https://github.com/Skycoder42/dart_pre_commit/workflows/Continous%20Integration/badge.svg" alt="Continous Integration"></a>
+<a href="https://pub.dev/packages/dart_pre_commit"><img src="https://img.shields.io/pub/v/dart_pre_commit" alt="Pub Version"></a></p>
+<p>A small collection of pre commit hooks to format and lint dart code</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Provides three built in hooks to run on staged files
+<ul>
+<li>Fix up imports (package/relative) and sort them</li>
+<li>Run <code>dartfmt</code></li>
+<li>Run <code>dartanalyzer</code></li>
+</ul>
+</li>
+<li>Only processes staged files
+<ul>
+<li>Automatically stages modified files again</li>
+<li>Fails if partially staged files had to be modified</li>
+</ul>
+</li>
+<li>Can be used as binary or as library</li>
+<li>Integrates well with most git hook solutions</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Simply add <code>dart_pre_commit</code> to your <code>pubspec.yaml</code> (preferebly as 
+dev_depedency) and run <code>pub get</code> (or <code>flutter pub get</code>).</p>
+<h2 id="usage">Usage</h2>
+<p>To make use of the hooks, you have to activate them first. This package only 
+comes with the hook-code itself, <strong>not</strong> with a way to integrate it with git as 
+actual hook. Here are a few examples on how to do so:</p>
+<h3 id="using-git_hooks">Using git_hooks</h3>
+<p>The first example uses the <a href="https://pub.dev/packages/git_hooks">git_hooks</a> 
+package to activate the hook. Take the following steps to activate the hook:</p>
+<ol>
+<li>Add <code>git_hooks</code> as dev_dependency to your project</li>
+<li>Run <code>pub run git_hooks create</code> to initialize and activate git hooks for your
+project</li>
+<li>Modify <code>git_hooks.dart</code> to look like the following:</li>
+</ol>
+<pre class="language-.dart"><code class="language-.dart">import "dart:io";
+
+import "package:dart_pre_commit/dart_pre_commit.dart";
+import "package:git_hooks/git_hooks.dart";
+
+void main(List&lt;String&gt; arguments) {
+  final params = {
+    Git.preCommit: _preCommit
+  };
+  change(arguments, params);
+}
+
+Future&lt;bool&gt; _preCommit() async {
+  hooks = await Hooks.create();  // adjust behaviour if neccessary
+  final result = await hooks();  // run activated hooks on staged files
+  return result.isSuccess;  // report the result
+}
+</code></pre>
+<h3 id="using-hanzo">Using hanzo</h3>
+<p>The second example uses the <a href="https://pub.dev/packages/hanzo">hanzo</a> package to
+activate the hook. Take the following steps to activate the hook:</p>
+<ol>
+<li>Add <code>hanzo</code> as dev_dependency to your project</li>
+<li>Run <code>pub run hanzo install</code> to initialize and activate git hooks for your
+project</li>
+<li>Create a file named <code>./tool/pre_commit.dart</code> as follows:</li>
+</ol>
+<pre class="language-.dart"><code class="language-.dart">import "package:dart_pre_commit/dart_pre_commit.dart";
+
+void main() {
+  hooks = await Hooks.create();  // adjust behaviour if neccessary
+  final result = await hooks();  // run activated hooks on staged files
+  exitCode = result.isSuccess ? 0 : 1;  // report the result
+}
+</code></pre>
+<ol start="4">
+<li>Run <code>pub run hanzo -i pre_commit</code></li>
+</ol>
+<h3 id="without-any-3rd-party-tools">Without any 3rd party tools</h3>
+<p>The package also provides a script to run the hooks. You can check it out via
+<code>pub run dart_pre_commit --help</code>. To use it as git hook, without any other tool,
+you have to create a script called <code>pre-commit</code> in <code>.git/hooks</code> as follows:</p>
+<pre class="language-.dart"><code class="language-.dart">#!/bin/bash
+
+exec pub run dart_pre_commit  # Add extra options as needed
+</code></pre>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation is available at 
+<a href="https://pub.dev/documentation/dart_pre_commit/latest/">https://pub.dev/documentation/dart_pre_commit/latest/</a>. A full example can be 
+found at <a href="https://pub.dev/packages/dart_pre_commit/example">https://pub.dev/packages/dart_pre_commit/example</a>.</p>
+      </section>
+      
+        <section class="summary">
+            <h2>Libraries</h2>
+          <dl>
+            <dt id="dart_pre_commit">
+              <span class="name"><a href="dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></span>             
+            </dt>
+            <dd>
+               
+            </dd>
+            <dt id="dart_pre_commit_bin">
+              <span class="name"><a href="dart_pre_commit_bin/dart_pre_commit_bin-library.html">dart_pre_commit_bin</a></span>             
+            </dt>
+            <dd>
+              Documentation of the dart_pre_commit binary <a href="dart_pre_commit_bin/dart_pre_commit_bin-library.html">[...]</a>
+            </dd>
+          </dl>
+        </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    dart_pre_commit
+      1.0.0
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>
