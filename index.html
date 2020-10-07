@@ -65,8 +65,8 @@
 <li>Provides three built in hooks to run on staged files
 <ul>
 <li>Fix up imports (package/relative) and sort them</li>
-<li>Run <code>dartfmt</code></li>
-<li>Run <code>dartanalyzer</code></li>
+<li>Run <code>dart format</code></li>
+<li>Run <code>dart analyze</code></li>
 </ul>
 </li>
 <li>Only processes staged files
@@ -80,7 +80,7 @@
 </ul>
 <h2 id="installation">Installation</h2>
 <p>Simply add <code>dart_pre_commit</code> to your <code>pubspec.yaml</code> (preferebly as 
-dev_depedency) and run <code>pub get</code> (or <code>flutter pub get</code>).</p>
+dev_depedency) and run <code>dart pub get</code> (or <code>flutter pub get</code>).</p>
 <h2 id="usage">Usage</h2>
 <p>To make use of the hooks, you have to activate them first. This package only 
 comes with the hook-code itself, <strong>not</strong> with a way to integrate it with git as 
@@ -90,7 +90,7 @@ actual hook. Here are a few examples on how to do so:</p>
 package to activate the hook. Take the following steps to activate the hook:</p>
 <ol>
 <li>Add <code>git_hooks</code> as dev_dependency to your project</li>
-<li>Run <code>pub run git_hooks create</code> to initialize and activate git hooks for your
+<li>Run <code>dart pub run git_hooks create</code> to initialize and activate git hooks for your
 project</li>
 <li>Modify <code>git_hooks.dart</code> to look like the following:</li>
 </ol>
@@ -117,7 +117,7 @@ Future&lt;bool&gt; _preCommit() async {
 activate the hook. Take the following steps to activate the hook:</p>
 <ol>
 <li>Add <code>hanzo</code> as dev_dependency to your project</li>
-<li>Run <code>pub run hanzo install</code> to initialize and activate git hooks for your
+<li>Run <code>dart pub run hanzo install</code> to initialize and activate git hooks for your
 project</li>
 <li>Create a file named <code>./tool/pre_commit.dart</code> as follows:</li>
 </ol>
@@ -130,15 +130,15 @@ void main() {
 }
 </code></pre>
 <ol start="4">
-<li>Run <code>pub run hanzo -i pre_commit</code></li>
+<li>Run <code>dart pub run hanzo -i pre_commit</code></li>
 </ol>
 <h3 id="without-any-3rd-party-tools">Without any 3rd party tools</h3>
 <p>The package also provides a script to run the hooks. You can check it out via
-<code>pub run dart_pre_commit --help</code>. To use it as git hook, without any other tool,
+<code>dart pub run dart_pre_commit --help</code>. To use it as git hook, without any other tool,
 you have to create a script called <code>pre-commit</code> in <code>.git/hooks</code> as follows:</p>
 <pre class="language-.dart"><code class="language-.dart">#!/bin/bash
 
-exec pub run dart_pre_commit  # Add extra options as needed
+exec dart pub run dart_pre_commit  # Add extra options as needed
 </code></pre>
 <h2 id="documentation">Documentation</h2>
 <p>The documentation is available at 
@@ -174,7 +174,7 @@ found at <a href="https://pub.dev/packages/dart_pre_commit/example">https://pub.
 <footer>
   <span class="no-break">
     dart_pre_commit
-      1.0.0
+      1.0.1
   </span>
 
 </footer>
