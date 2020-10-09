@@ -127,9 +127,11 @@ documentation for more details.</p>
   bool continueOnError = false,
   Logger logger = const Logger.standard(),
 }) async {
+  final resolver = FileResolver();
   final runner = ProgramRunner(logger);
   return Hooks.internal(
     logger: logger,
+    resolver: resolver,
     runner: runner,
     fixImports: fixImports ? await _obtainFixImports() : null,
     format: format ? Format(runner) : null,
@@ -137,7 +139,7 @@ documentation for more details.</p>
         ? Analyze(
             logger: logger,
             runner: runner,
-            fileResolver: FileResolver(),
+            fileResolver: resolver,
           )
         : null,
     continueOnError: continueOnError,
@@ -155,7 +157,7 @@ documentation for more details.</p>
 <footer>
   <span class="no-break">
     dart_pre_commit
-      1.0.1
+      1.0.2
   </span>
 
 </footer>
