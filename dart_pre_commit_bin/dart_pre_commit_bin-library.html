@@ -69,7 +69,7 @@ specify command line arguments to the script. The following tables list all
 available options, organized into the same groups as shown when running
 <code>dart pub run dart_pre_commit --help</code>.</p>
 <h3 id="parsing-options">Parsing Options</h3>
-<table><thead><tr><th>Option</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>-i</code>, <code>--[no-]fix-imports</code></td><td>on</td><td>Format and sort imports of staged files.</td></tr><tr><td><code>-f</code>, <code>--[no-]format</code></td><td>on</td><td>Format staged files with dart format.</td></tr><tr><td><code>-a</code>, <code>--[no-]analyze</code></td><td>on</td><td>Run dart analyze to find issue for the staged files.</td></tr><tr><td><code>-c</code>, <code>--[no-]continue-on-error</code></td><td>off</td><td>Continue checks even if a task fails for a certain file. The whole hook will still fail, but only after all files have been processed</td></tr></tbody></table>
+<table><thead><tr><th>Option</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>-i</code>, <code>--[no-]fix-imports</code></td><td>on</td><td>Format and sort imports of staged files.</td></tr><tr><td><code>-f</code>, <code>--[no-]format</code></td><td>on</td><td>Format staged files with dart format.</td></tr><tr><td><code>-a</code>, <code>--[no-]analyze</code></td><td>on</td><td>Run dart analyze to find issue for the staged files.</td></tr><tr><td><code>-p</code>, <code>--[no-]check-pull-up</code></td><td>off</td><td>Check if direct dependencies in the pubspec.lock have higher versions then specified in pubspec.yaml and warn if that's the case.</td></tr><tr><td><code>-c</code>, <code>--[no-]continue-on-error</code></td><td>off</td><td>Continue checks even if a task fails for a certain file. The whole hook will still fail, but only after all files have been processed</td></tr></tbody></table>
 <h3 id="other">Other</h3>
 <table><thead><tr><th>Option</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>-d</code>, <code>--directory=&lt;dir&gt;</code></td><td><code>Directory.current</code></td><td>Set the directory to run this command in. By default, it will run in the current working directory.</td></tr><tr><td><code>-e</code>, <code>--[no-]detailed-exit-code</code></td><td>off</td><td>Instead of simply 0/1 as exit code for 'commit ok' or 'commit needs user intervention', output exit codes according to the full hook result (See <a href="../dart_pre_commit/HookResult-class.html">HookResult</a>).</td></tr><tr><td><code>-v</code>, <code>--version</code></td><td>-</td><td>Show the version of the dart_pre_commit package.</td></tr><tr><td><code>-h</code>, <code>--help</code></td><td>-</td><td>Show this help.</td></tr></tbody></table>
     </section>
@@ -104,7 +104,7 @@ available options, organized into the same groups as shown when running
 <footer>
   <span class="no-break">
     dart_pre_commit
-      1.0.2
+      1.1.0
   </span>
 
 </footer>
