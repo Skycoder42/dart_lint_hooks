@@ -60,15 +60,15 @@
     <li class="section-title inherited">
       <a href="../../dart_pre_commit/HooksProvider-class.html#instance-properties">Properties</a>
     </li>
-    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.1.beta/dart-core/Object/hashCode.html">hashCode</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.1.beta/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.8.beta/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.8.beta/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
     <li class="section-title inherited"><a href="../../dart_pre_commit/HooksProvider-class.html#instance-methods">Methods</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.1.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.1.beta/dart-core/Object/toString.html">toString</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.8.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.8.beta/dart-core/Object/toString.html">toString</a></li>
 
     <li class="section-title inherited"><a href="../../dart_pre_commit/HooksProvider-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.1.beta/dart-core/Object/operator_equals.html">operator ==</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.8.beta/dart-core/Object/operator_equals.html">operator ==</a></li>
 
 
     <li class="section-title"><a href="../../dart_pre_commit/HooksProvider-class.html#static-properties">Static properties</a></li>
@@ -84,7 +84,7 @@
 </h1></div>
 
         <section class="multi-line-signature">
-          <span class="returntype"><a href="https://pub.dev/documentation/riverpod/0.13.0-nullsafety.0/all/FutureProviderFamily-class.html">FutureProviderFamily</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../dart_pre_commit/Hooks-class.html">Hooks</a></span>, <span class="type-parameter"><a href="../../dart_pre_commit/HooksConfig-class.html">HooksConfig</a></span>&gt;</span></span>
+          <span class="returntype"><a href="https://pub.dev/documentation/riverpod/0.13.0-nullsafety.1/all/FutureProviderFamily-class.html">FutureProviderFamily</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../dart_pre_commit/Hooks-class.html">Hooks</a></span>, <span class="type-parameter"><a href="../../dart_pre_commit/HooksConfig-class.html">HooksConfig</a></span>&gt;</span></span>
           <span class="name ">hookProvider</span>
           <div class="features">final</div>
         </section>
@@ -108,11 +108,11 @@ and tasks for the hooks instance.</p>
         await ref.watch(HooksProviderInternal.fixImportsProvider.future),
       if (param.format) ref.watch(HooksProviderInternal.formatProvider),
       if (param.analyze) ref.watch(HooksProviderInternal.analyzeProvider),
-      if (param.pullUpDependencies)
-        ref.watch(HooksProviderInternal.pullUpDependenciesProvider),
       if (param.outdated != null)
         ref.watch(HooksProviderInternal.outdatedProvider(param.outdated!)),
       if (param.nullsafe) ref.watch(HooksProviderInternal.nullsafeProvider),
+      if (param.pullUpDependencies)
+        ref.watch(HooksProviderInternal.pullUpDependenciesProvider),
       if (param.extraTasks != null) ...param.extraTasks!,
     ],
   ),
@@ -131,7 +131,7 @@ and tasks for the hooks instance.</p>
 <footer>
   <span class="no-break">
     dart_pre_commit
-      2.1.0-nullsafety.0
+      2.2.0-nullsafety.0
   </span>
 
 </footer>
