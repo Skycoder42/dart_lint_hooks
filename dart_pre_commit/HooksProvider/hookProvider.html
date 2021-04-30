@@ -106,6 +106,8 @@ and tasks for the hooks instance.</p>
     tasks: [
       if (param.fixImports)
         await ref.watch(HooksProviderInternal.fixImportsProvider.future),
+      if (param.libraryImports)
+        await ref.watch(HooksProviderInternal.libraryImportsProvider.future),
       if (param.format) ref.watch(HooksProviderInternal.formatProvider),
       if (param.analyze) ref.watch(HooksProviderInternal.analyzeProvider),
       if (param.outdated != null)
@@ -131,7 +133,7 @@ and tasks for the hooks instance.</p>
 <footer>
   <span class="no-break">
     dart_pre_commit
-      2.2.0
+      2.3.0
   </span>
 
 </footer>

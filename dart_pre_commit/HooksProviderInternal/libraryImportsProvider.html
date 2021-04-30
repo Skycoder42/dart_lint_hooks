@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the nullsafeProvider property from the HooksProviderInternal class, for the Dart programming language.">
-  <title>nullsafeProvider property - HooksProviderInternal class - dart_pre_commit library - Dart API</title>
+  <meta name="description" content="API docs for the libraryImportsProvider property from the HooksProviderInternal class, for the Dart programming language.">
+  <title>libraryImportsProvider property - HooksProviderInternal class - dart_pre_commit library - Dart API</title>
 
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,9 +28,9 @@
     <li><a href="../../index.html">dart_pre_commit</a></li>
     <li><a href="../../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
     <li><a href="../../dart_pre_commit/HooksProviderInternal-class.html">HooksProviderInternal</a></li>
-    <li class="self-crumb">nullsafeProvider property</li>
+    <li class="self-crumb">libraryImportsProvider property</li>
   </ol>
-  <div class="self-name">nullsafeProvider</div>
+  <div class="self-name">libraryImportsProvider</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -49,7 +49,7 @@
       <li><a href="../../index.html">dart_pre_commit</a></li>
       <li><a href="../../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
       <li><a href="../../dart_pre_commit/HooksProviderInternal-class.html">HooksProviderInternal</a></li>
-      <li class="self-crumb">nullsafeProvider property</li>
+      <li class="self-crumb">libraryImportsProvider property</li>
     </ol>
     
     <h5>HooksProviderInternal class</h5>
@@ -93,24 +93,24 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-main-content" class="main-content">
-      <div><h1><span class="kind-property">nullsafeProvider</span> property     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+      <div><h1><span class="kind-property">libraryImportsProvider</span> property     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
         <section class="multi-line-signature">
-          <span class="returntype"><a href="https://pub.dev/documentation/riverpod/0.14.0+3/riverpod/Provider-class.html">Provider</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../dart_pre_commit/NullsafeTask-class.html">NullsafeTask</a></span>&gt;</span></span>
-          <span class="name ">nullsafeProvider</span>
+          <span class="returntype"><a href="https://pub.dev/documentation/riverpod/0.14.0+3/riverpod/FutureProvider-class.html">FutureProvider</a><span class="signature">&lt;<wbr><span class="type-parameter">LibraryImportsTask</span>&gt;</span></span>
+          <span class="name ">libraryImportsProvider</span>
           <div class="features">final</div>
         </section>
         <section class="desc markdown">
-          <p>A simple provider for <a href="../../dart_pre_commit/NullsafeTask-class.html">NullsafeTask</a>.</p>
-<p>Uses <a href="../../dart_pre_commit/HooksProviderInternal/programRunnerProvider.html">programRunnerProvider</a> and <a href="../../dart_pre_commit/HooksProviderInternal/taskLoggerProvider.html">taskLoggerProvider</a>.</p>
+          <p>A simple provider for <code>LibraryImportsTask</code>.</p>
+<p>Uses <a href="../../dart_pre_commit/HooksProviderInternal/fileResolverProvider.html">fileResolverProvider</a> and <a href="../../dart_pre_commit/HooksProviderInternal/taskLoggerProvider.html">taskLoggerProvider</a>.</p>
         </section>
                 <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
-          <pre class="language-dart"><code class="language-dart">static final nullsafeProvider = Provider(
-  (ref) =&gt; NullsafeTask(
-    programRunner: ref.watch(programRunnerProvider),
-    logger: ref.watch(taskLoggerProvider),
+          <pre class="language-dart"><code class="language-dart">static final libraryImportsProvider = FutureProvider(
+  (ref) =&gt; LibraryImportsTask.current(
+    fileResolver: ref.watch(fileResolverProvider),
+    logger: ref.watch(loggerProvider),
   ),
 );
 

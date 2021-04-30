@@ -69,6 +69,7 @@
     <li class="inherited"><a href="../../dart_pre_commit/HooksConfig/fixImports.html">fixImports</a></li>
     <li class="inherited"><a href="../../dart_pre_commit/HooksConfig/format.html">format</a></li>
     <li class="inherited"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="../../dart_pre_commit/HooksConfig/libraryImports.html">libraryImports</a></li>
     <li class="inherited"><a href="../../dart_pre_commit/HooksConfig/nullsafe.html">nullsafe</a></li>
     <li class="inherited"><a href="../../dart_pre_commit/HooksConfig/outdated.html">outdated</a></li>
     <li class="inherited"><a href="../../dart_pre_commit/HooksConfig/pullUpDependencies.html">pullUpDependencies</a></li>
@@ -95,6 +96,7 @@
     <section class="multi-line-signature">
       const
       <span class="name ">HooksConfig</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="-param-fixImports">{<span>@<a href="https://pub.dev/documentation/freezed_annotation/0.14.1/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">fixImports</span>, </span></li>
+<li><span class="parameter" id="-param-libraryImports"><span>@<a href="https://pub.dev/documentation/freezed_annotation/0.14.1/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">libraryImports</span>, </span></li>
 <li><span class="parameter" id="-param-format"><span>@<a href="https://pub.dev/documentation/freezed_annotation/0.14.1/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">format</span>, </span></li>
 <li><span class="parameter" id="-param-analyze"><span>@<a href="https://pub.dev/documentation/freezed_annotation/0.14.1/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">analyze</span>, </span></li>
 <li><span class="parameter" id="-param-outdated"><span class="type-annotation"><a href="../../dart_pre_commit/OutdatedLevel-class.html">OutdatedLevel</a>?</span> <span class="parameter-name">outdated</span>, </span></li>
@@ -114,6 +116,9 @@
       <pre class="language-dart"><code class="language-dart">const factory HooksConfig({
   &#47;&#47;&#47; Specifies, whether the [FixImportsTask] should be enabled.
   @Default(false) bool fixImports,
+
+  &#47;&#47;&#47; Specifies, whether the [LibraryImportsTask] should be enabled.
+  @Default(false) bool libraryImports,
 
   &#47;&#47;&#47; Specifies, whether the [FormatTask] should be enabled.
   @Default(false) bool format,
@@ -156,7 +161,7 @@
 <footer>
   <span class="no-break">
     dart_pre_commit
-      2.2.0
+      2.3.0
   </span>
 
 </footer>
