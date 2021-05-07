@@ -248,6 +248,35 @@ void main() {
     );
   });
 
+  test('library-exports', () async {
+    await _git(const ['add', 'lib/src/analyze.dart']);
+
+    final lines = <String>[];
+    final code = await _sut(
+      const [
+        '--no-fix-imports',
+        '--no-format',
+        '--no-analyze',
+        '--library-exports',
+        '--detailed-exit-code',
+      ],
+      failOnError: false,
+      onStdout: (stream) => stream
+          .transform(utf8.decoder)
+          .transform(const LineSplitter())
+          .listen((line) => lines.add(line)),
+    );
+    expect(code, HookResult.rejected.index);
+    expect(
+      lines,
+      contains(
+        "  [INF]   info - The value of the local variable 'x' isn't used at "
+        'lib${separator}src${separator}analyze.dart:2:7 - '
+        '(unused_local_variable)',
+      ),
+    );
+  });
+
   test('check-pull-up', () async {
     await _git(const ['add', 'pubspec.lock']);
 

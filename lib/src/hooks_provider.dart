@@ -1,6 +1,7 @@
 // coverage:ignore-file
 import 'dart:io';
 
+import 'package:dart_pre_commit/src/tasks/library_exports_task.dart';
 import 'package:dart_pre_commit/src/tasks/library_imports_task.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod/riverpod.dart';
@@ -36,6 +37,9 @@ class HooksConfig with _$HooksConfig {
 
     /// Specifies, whether the [AnalyzeTask] should be enabled.
     @Default(false) bool analyze,
+
+    /// Specifies, whether the [LibraryExportsTask] should be enabled.
+    @Default(false) bool libraryExports,
 
     /// Specifies, whether the [OutdatedTask] in default mode should be enabled.
     ///
@@ -89,6 +93,8 @@ abstract class HooksProvider {
           await ref.watch(HooksProviderInternal.libraryImportsProvider.future),
         if (param.format) ref.watch(HooksProviderInternal.formatProvider),
         if (param.analyze) ref.watch(HooksProviderInternal.analyzeProvider),
+        if (param.libraryExports)
+          ref.watch(HooksProviderInternal.libraryExportsProvider),
         if (param.outdated != null)
           ref.watch(HooksProviderInternal.outdatedProvider(param.outdated!)),
         if (param.nullsafe) ref.watch(HooksProviderInternal.nullsafeProvider),
@@ -177,6 +183,15 @@ abstract class HooksProviderInternal {
       fileResolver: ref.watch(fileResolverProvider),
       programRunner: ref.watch(programRunnerProvider),
       logger: ref.watch(taskLoggerProvider),
+    ),
+  );
+
+  /// A simple provider for [LibraryExportsTask].
+  ///
+  /// Uses [taskLoggerProvider].
+  static final libraryExportsProvider = Provider(
+    (ref) => LibraryExportsTask(
+      taskLogger: ref.read(taskLoggerProvider),
     ),
   );
 

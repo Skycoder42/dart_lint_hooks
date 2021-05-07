@@ -18,6 +18,7 @@
 /// `-t`, `--[no-]library-imports`      | off        | Check if top level libraries are wrongfully imported in src and test files.
 /// `-f`, `--[no-]format`               | on         | Format staged files with dart format.
 /// `-a`, `--[no-]analyze`              | on         | Run dart analyze to find issue for the staged files.
+/// `-x`, `--[no-]library-exports`      | off        | Check if all declared src libraries are exported from top level libraries.
 /// `-o`, `--outdated=<level>`          | `disabled` | Enables the outdated packages check. You can choose one of the levels described below to require certain package updates. If they are not met, the hook will fail. No matter what level, as long as it is not disabled - which will completly disable the hook - it will still print available package updates without failing. Can be any of [OutdatedLevel].
 /// `-n`, `--[no-]nullsafe`             | off        | Activates null-safety checks. Will check all installed dependencies for null-safety updates and fail if any can be installed without problems.
 /// `-p`, `--[no-]check-pull-up`        | off        | Check if direct dependencies in the pubspec.lock have higher versions then specified in pubspec.yaml and warn if that's the case.
@@ -74,6 +75,12 @@ Future<int> _run(List<String> args) async {
       abbr: 'a',
       defaultsTo: true,
       help: 'Run dart analyze to find issue for the staged files.',
+    )
+    ..addFlag(
+      'library-exports',
+      abbr: 'x',
+      help: 'Check if all declared src libraries are exported from top level '
+          'libraries.',
     )
     ..addOption(
       'outdated',
@@ -196,6 +203,7 @@ Future<int> _run(List<String> args) async {
       libraryImports: options['library-imports'] as bool,
       format: options['format'] as bool,
       analyze: options['analyze'] as bool,
+      libraryExports: options['library-exports'] as bool,
       outdated: outdatedLevel == disabledOutdatedLevel
           ? null
           : OutdatedLevelX.parse(outdatedLevel),
