@@ -7,6 +7,7 @@
   <meta name="description" content="API docs for the NullsafeTask class from the dart_pre_commit library, for the Dart programming language.">
   <title>NullsafeTask class - dart_pre_commit library - Dart API</title>
 
+
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -15,7 +16,9 @@
   <link rel="stylesheet" href="../static-assets/styles.css">
   <link rel="icon" href="../static-assets/favicon.png">
 
+  
 </head>
+
 
 <body data-base-href="../"
       data-using-base-href="false">
@@ -37,19 +40,21 @@
 
 <main>
 
+
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <header id="header-search-sidebar" class="hidden-l">
-      <form class="search-sidebar" role="search">
-        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
-      </form>
-    </header>
-    
-    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-      <li><a href="../index.html">dart_pre_commit</a></li>
-      <li><a href="../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
-      <li class="self-crumb">NullsafeTask class</li>
-    </ol>
-    
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">dart_pre_commit</a></li>
+  <li><a href="../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
+  <li class="self-crumb">NullsafeTask class</li>
+</ol>
+
+
     <h5>dart_pre_commit library</h5>
     <ol>
   <li class="section-title"><a href="../dart_pre_commit/dart_pre_commit-library.html#classes">Classes</a></li>
@@ -102,12 +107,16 @@
   </div>
 
   <div id="dartdoc-main-content" class="main-content">
-      <div><h1><span class="kind-class">NullsafeTask</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
-     <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
+      <div>
+<h1><span class="kind-class">NullsafeTask</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+    <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
 </h1></div>
 
-    <section class="desc markdown">
-      <p>A task that checks if any of your dependencies can be made nullsafe.</p>
+    
+<section class="desc markdown">
+  <p>A task that checks if any of your dependencies can be made nullsafe.</p>
 <p>It runs <code>dart pub outdated --mode=null-safety</code> to check on the current
 status of all packages. If any package has a nullsafe version that has not
 been installed yet, it shows it as available. Available nullsafety updates
@@ -115,13 +124,14 @@ will not cause the task to reject your commit..</p>
 <p>However, if any of the nullsafety updates can also be installed without
 a breaking version update, the package is listed as upgradeable and will
 cause the task to reject the commit until updated.</p>
-    </section>
-    
+</section>
+
+
     <section>
       <dl class="dl-horizontal">
         <dt>Inheritance</dt>
         <dd><ul class="gt-separated dark clazz-relationships">
-          <li><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object-class.html">Object</a></li>
+          <li><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object-class.html">Object</a></li>
           <li><a href="../dart_pre_commit/OutdatedTaskBase-class.html">OutdatedTaskBase</a></li>
           <li>NullsafeTask</li>
         </ul></dd>
@@ -156,62 +166,83 @@ cause the task to reject the commit until updated.</p>
 
       <dl class="properties">
         <dt id="callForEmptyEntries" class="property inherited">
-          <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">callForEmptyEntries</a></span>
-          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-core/bool-class.html">bool</a></span>         
-        </dt>
-        <dd class="inherited">
-          Specifies, whether the task should still be executed, even if no files
+  <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">callForEmptyEntries</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Specifies, whether the task should still be executed, even if no files
 match. <a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">[...]</a>
-                  <div class="features">read-only, inherited</div>
+  <div class="features">read-only, inherited</div>
+
 </dd>
+
         <dt id="filePattern" class="property inherited">
-          <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/filePattern.html">filePattern</a></span>
-          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-core/Pattern-class.html">Pattern</a></span>         
-        </dt>
-        <dd class="inherited">
-          Returns a pattern to check if a <a href="../dart_pre_commit/RepoEntry-class.html">RepoEntry</a> can be processed by this task. <a href="../dart_pre_commit/OutdatedTaskBase/filePattern.html">[...]</a>
-                  <div class="features">read-only, inherited</div>
+  <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/filePattern.html">filePattern</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-core/Pattern-class.html">Pattern</a></span> 
+
+</dt>
+<dd class="inherited">
+  Returns a pattern to check if a <a href="../dart_pre_commit/RepoEntry-class.html">RepoEntry</a> can be processed by this task. <a href="../dart_pre_commit/OutdatedTaskBase/filePattern.html">[...]</a>
+  <div class="features">read-only, inherited</div>
+
 </dd>
+
         <dt id="hashCode" class="property inherited">
-          <span class="name"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/hashCode.html">hashCode</a></span>
-          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-core/int-class.html">int</a></span>         
-        </dt>
-        <dd class="inherited">
-          The hash code for this object. <a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/hashCode.html">[...]</a>
-                  <div class="features">read-only, inherited</div>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object. <a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/hashCode.html">[...]</a>
+  <div class="features">read-only, inherited</div>
+
 </dd>
+
         <dt id="logger" class="property inherited">
-          <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/logger.html">logger</a></span>
-          <span class="signature">&#8594; <a href="../dart_pre_commit/TaskLogger-class.html">TaskLogger</a></span>         
-        </dt>
-        <dd class="inherited">
-          The <a href="../dart_pre_commit/TaskLogger-class.html">TaskLogger</a> instance used by this task. 
-                  <div class="features">final, inherited</div>
+  <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/logger.html">logger</a></span>
+  <span class="signature">&#8594; <a href="../dart_pre_commit/TaskLogger-class.html">TaskLogger</a></span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="../dart_pre_commit/TaskLogger-class.html">TaskLogger</a> instance used by this task. 
+  <div class="features">final, inherited</div>
+
 </dd>
+
         <dt id="programRunner" class="property inherited">
-          <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/programRunner.html">programRunner</a></span>
-          <span class="signature">&#8594; <a href="../dart_pre_commit/ProgramRunner-class.html">ProgramRunner</a></span>         
-        </dt>
-        <dd class="inherited">
-          The <a href="../dart_pre_commit/ProgramRunner-class.html">ProgramRunner</a> instance used by this task. 
-                  <div class="features">final, inherited</div>
+  <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/programRunner.html">programRunner</a></span>
+  <span class="signature">&#8594; <a href="../dart_pre_commit/ProgramRunner-class.html">ProgramRunner</a></span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="../dart_pre_commit/ProgramRunner-class.html">ProgramRunner</a> instance used by this task. 
+  <div class="features">final, inherited</div>
+
 </dd>
+
         <dt id="runtimeType" class="property inherited">
-          <span class="name"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/runtimeType.html">runtimeType</a></span>
-          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-core/Type-class.html">Type</a></span>         
-        </dt>
-        <dd class="inherited">
-          A representation of the runtime type of the object. 
-                  <div class="features">read-only, inherited</div>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object. 
+  <div class="features">read-only, inherited</div>
+
 </dd>
+
         <dt id="taskName" class="property">
-          <span class="name"><a href="../dart_pre_commit/NullsafeTask/taskName.html">taskName</a></span>
-          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-core/String-class.html">String</a></span>         
-        </dt>
-        <dd>
-          Returns the user-visible name of the task. 
-                  <div class="features">read-only, override</div>
+  <span class="name"><a href="../dart_pre_commit/NullsafeTask/taskName.html">taskName</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Returns the user-visible name of the task. 
+  <div class="features">read-only, override</div>
+
 </dd>
+
       </dl>
     </section>
 
@@ -219,41 +250,57 @@ match. <a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">[.
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="call" class="callable">
-          <span class="name"><a href="../dart_pre_commit/NullsafeTask/call.html">call</a></span><span class="signature">(<wbr><span class="parameter" id="call-param-entries"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dart_pre_commit/RepoEntry-class.html">RepoEntry</a></span>&gt;</span></span> <span class="parameter-name">entries</span></span>)
-            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dart_pre_commit/TaskResult-class.html">TaskResult</a></span>&gt;</span></span>
-          </span>
-                  </dt>
-        <dd>
-          Executes the task on all given <code>entries</code>. <a href="../dart_pre_commit/NullsafeTask/call.html">[...]</a>
-                  <div class="features">override</div>
+  <span class="name"><a href="../dart_pre_commit/NullsafeTask/call.html">call</a></span><span class="signature">(<wbr><span class="parameter" id="call-param-entries"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dart_pre_commit/RepoEntry-class.html">RepoEntry</a></span>&gt;</span></span> <span class="parameter-name">entries</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../dart_pre_commit/TaskResult-class.html">TaskResult</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Executes the task on all given <code>entries</code>. <a href="../dart_pre_commit/NullsafeTask/call.html">[...]</a>
+  <div class="features">override</div>
+
 </dd>
+
         <dt id="collectOutdated" class="callable inherited">
-          <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/collectOutdated.html">collectOutdated</a></span><span class="signature">(<wbr><span class="parameter" id="collectOutdated-param-nullSafety">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">nullSafety</span>}</span>)
-            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">OutdatedInfo</span>&gt;</span></span>
-          </span>
-                  </dt>
-        <dd class="inherited">
-          Runs <code>dart pub outdated</code> and collects the results. <a href="../dart_pre_commit/OutdatedTaskBase/collectOutdated.html">[...]</a>
-                  <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a>, inherited</div>
+  <span class="name"><a href="../dart_pre_commit/OutdatedTaskBase/collectOutdated.html">collectOutdated</a></span><span class="signature">(<wbr><span class="parameter" id="collectOutdated-param-nullSafety">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.4/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">nullSafety</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">OutdatedInfo</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Runs <code>dart pub outdated</code> and collects the results. <a href="../dart_pre_commit/OutdatedTaskBase/collectOutdated.html">[...]</a>
+  <div class="features">@<a href="https://pub.dev/documentation/meta/1.4.0/meta/protected-constant.html">protected</a>, inherited</div>
+
 </dd>
+
         <dt id="noSuchMethod" class="callable inherited">
-          <span class="name"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-                  </dt>
-        <dd class="inherited">
-          Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/noSuchMethod.html">[...]</a>
-                  <div class="features">inherited</div>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/noSuchMethod.html">[...]</a>
+  <div class="features">inherited</div>
+
 </dd>
+
         <dt id="toString" class="callable inherited">
-          <span class="name"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-core/String-class.html">String</a></span>
-          </span>
-                  </dt>
-        <dd class="inherited">
-          A string representation of this object. <a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/toString.html">[...]</a>
-                  <div class="features">inherited</div>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object. <a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/toString.html">[...]</a>
+  <div class="features">inherited</div>
+
 </dd>
+
       </dl>
     </section>
 
@@ -261,14 +308,18 @@ match. <a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">[.
       <h2>Operators</h2>
       <dl class="callables">
         <dt id="operator ==" class="callable inherited">
-          <span class="name"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
-            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.12.4/dart-core/bool-class.html">bool</a></span>
-          </span>
-                  </dt>
-        <dd class="inherited">
-          The equality operator. <a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/operator_equals.html">[...]</a>
-                  <div class="features">inherited</div>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.4/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator. <a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/operator_equals.html">[...]</a>
+  <div class="features">inherited</div>
+
 </dd>
+
       </dl>
     </section>
 
@@ -289,20 +340,20 @@ match. <a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">[.
     </li>
     <li class="inherited"><a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">callForEmptyEntries</a></li>
     <li class="inherited"><a href="../dart_pre_commit/OutdatedTaskBase/filePattern.html">filePattern</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/hashCode.html">hashCode</a></li>
     <li class="inherited"><a href="../dart_pre_commit/OutdatedTaskBase/logger.html">logger</a></li>
     <li class="inherited"><a href="../dart_pre_commit/OutdatedTaskBase/programRunner.html">programRunner</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/runtimeType.html">runtimeType</a></li>
     <li><a href="../dart_pre_commit/NullsafeTask/taskName.html">taskName</a></li>
 
     <li class="section-title"><a href="../dart_pre_commit/NullsafeTask-class.html#instance-methods">Methods</a></li>
     <li><a href="../dart_pre_commit/NullsafeTask/call.html">call</a></li>
     <li class="inherited"><a href="../dart_pre_commit/OutdatedTaskBase/collectOutdated.html">collectOutdated</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/toString.html">toString</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/toString.html">toString</a></li>
 
     <li class="section-title inherited"><a href="../dart_pre_commit/NullsafeTask-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.4/dart-core/Object/operator_equals.html">operator ==</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.4/dart-core/Object/operator_equals.html">operator ==</a></li>
 
 
 
@@ -316,17 +367,19 @@ match. <a href="../dart_pre_commit/OutdatedTaskBase/callForEmptyEntries.html">[.
 <footer>
   <span class="no-break">
     dart_pre_commit
-      2.3.1
+      2.3.2
   </span>
 
+  
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../static-assets/typeahead.bundle.min.js"></script>
+
 <script src="../static-assets/highlight.pack.js"></script>
 <script src="../static-assets/script.js"></script>
+
 
 
 </body>
 
 </html>
+

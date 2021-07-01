@@ -7,6 +7,7 @@
   <meta name="description" content="tasks Topic docs, for the Dart programming language.">
   <title>tasks Topic - Dart API</title>
 
+
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -15,7 +16,9 @@
   <link rel="stylesheet" href="../static-assets/styles.css">
   <link rel="icon" href="../static-assets/favicon.png">
 
+  
 </head>
+
 
 <body data-base-href="../"
       data-using-base-href="false">
@@ -36,129 +39,150 @@
 
 <main>
 
-  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
-      <form class="search-sidebar" role="search">
-        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
-      </form>
-    </header>
-    
-    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-      <li><a href="../index.html">dart_pre_commit</a></li>
-      <li class="self-crumb">tasks Topic</li>
-    </ol>
-    
-    <h5><span class="package-name">dart_pre_commit</span> <span class="package-kind">package</span></h5>
-    <ol>
-          <li class="section-title">Topics</li>
-            <li><a href="../topics/tasks-topic.html">tasks</a></li>
-          <li class="section-title">Libraries</li>
-          <li><a href="../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
-          <li><a href="../dart_pre_commit_bin/dart_pre_commit_bin-library.html">dart_pre_commit_bin</a></li>
-    </ol>
-  </div>
 
-  <div id="dartdoc-main-content" class="main-content">
-      <h1><span class="kind-category">tasks</span> Topic</h1>
-      <section class="desc markdown">
-        <h1 id="tasks">Tasks</h1>
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">dart_pre_commit</a></li>
+  <li class="self-crumb">tasks Topic</li>
+</ol>
+
+
+  <h5><span class="package-name">dart_pre_commit</span> <span class="package-kind">package</span></h5>
+  <ol>
+      <li class="section-title">Topics</li>
+        <li><a href="../topics/tasks-topic.html">tasks</a></li>
+      <li class="section-title">Libraries</li>
+      <li><a href="../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
+      <li><a href="../dart_pre_commit_bin/dart_pre_commit_bin-library.html">dart_pre_commit_bin</a></li>
+</ol>
+
+</div>
+
+<div id="dartdoc-main-content" class="main-content">
+  <h1><span class="kind-category">tasks</span> Topic</h1>
+  
+<section class="desc markdown">
+  <h1 id="tasks">Tasks</h1>
 <p>This page lists all currently implemented tasks.</p>
-      </section>
-      
-
-        <section class="summary offset-anchor" id="classes">
-        <h2>Classes</h2>
-
-        <dl>
-            <dt id="AnalyzeTask">
-              <span class="name "><a href="../dart_pre_commit/AnalyzeTask-class.html">AnalyzeTask</a></span>                 <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
-            
-            </dt>
-            <dd>
-              A task the runs <code>dart analyze</code> to check for problems. <a href="../dart_pre_commit/AnalyzeTask-class.html">[...]</a>
-            </dd>
-            <dt id="FixImportsTask">
-              <span class="name "><a href="../dart_pre_commit/FixImportsTask-class.html">FixImportsTask</a></span>                 <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
-            
-            </dt>
-            <dd>
-              A task that scans dart files for unclean imports and fixes them. <a href="../dart_pre_commit/FixImportsTask-class.html">[...]</a>
-            </dd>
-            <dt id="FormatTask">
-              <span class="name "><a href="../dart_pre_commit/FormatTask-class.html">FormatTask</a></span>                 <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
-            
-            </dt>
-            <dd>
-              A task the runs <code>dart format</code> on the given file. <a href="../dart_pre_commit/FormatTask-class.html">[...]</a>
-            </dd>
-            <dt id="NullsafeTask">
-              <span class="name "><a href="../dart_pre_commit/NullsafeTask-class.html">NullsafeTask</a></span>                 <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
-            
-            </dt>
-            <dd>
-              A task that checks if any of your dependencies can be made nullsafe. <a href="../dart_pre_commit/NullsafeTask-class.html">[...]</a>
-            </dd>
-            <dt id="OutdatedTask">
-              <span class="name "><a href="../dart_pre_commit/OutdatedTask-class.html">OutdatedTask</a></span>                 <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
-            
-            </dt>
-            <dd>
-              A task that checks if any of your installed dependencies have to be updated. <a href="../dart_pre_commit/OutdatedTask-class.html">[...]</a>
-            </dd>
-            <dt id="PullUpDependenciesTask">
-              <span class="name "><a href="../dart_pre_commit/PullUpDependenciesTask-class.html">PullUpDependenciesTask</a></span>                 <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
-            
-            </dt>
-            <dd>
-              This task scans the lockfile to check if dependencies should be pulled up. <a href="../dart_pre_commit/PullUpDependenciesTask-class.html">[...]</a>
-            </dd>
-        </dl>
-      </section>
+</section>
 
 
 
+  <section class="summary offset-anchor" id="classes">
+    <h2>Classes</h2>
+
+    <dl>
+      <dt id="AnalyzeTask">
+  <span class="name "><a href="../dart_pre_commit/AnalyzeTask-class.html">AnalyzeTask</a></span> 
+    <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
+
+</dt>
+<dd>
+  A task the runs <code>dart analyze</code> to check for problems. <a href="../dart_pre_commit/AnalyzeTask-class.html">[...]</a>
+</dd>
+
+      <dt id="FixImportsTask">
+  <span class="name "><a href="../dart_pre_commit/FixImportsTask-class.html">FixImportsTask</a></span> 
+    <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
+
+</dt>
+<dd>
+  A task that scans dart files for unclean imports and fixes them. <a href="../dart_pre_commit/FixImportsTask-class.html">[...]</a>
+</dd>
+
+      <dt id="FormatTask">
+  <span class="name "><a href="../dart_pre_commit/FormatTask-class.html">FormatTask</a></span> 
+    <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
+
+</dt>
+<dd>
+  A task the runs <code>dart format</code> on the given file. <a href="../dart_pre_commit/FormatTask-class.html">[...]</a>
+</dd>
+
+      <dt id="NullsafeTask">
+  <span class="name "><a href="../dart_pre_commit/NullsafeTask-class.html">NullsafeTask</a></span> 
+    <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
+
+</dt>
+<dd>
+  A task that checks if any of your dependencies can be made nullsafe. <a href="../dart_pre_commit/NullsafeTask-class.html">[...]</a>
+</dd>
+
+      <dt id="OutdatedTask">
+  <span class="name "><a href="../dart_pre_commit/OutdatedTask-class.html">OutdatedTask</a></span> 
+    <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
+
+</dt>
+<dd>
+  A task that checks if any of your installed dependencies have to be updated. <a href="../dart_pre_commit/OutdatedTask-class.html">[...]</a>
+</dd>
+
+      <dt id="PullUpDependenciesTask">
+  <span class="name "><a href="../dart_pre_commit/PullUpDependenciesTask-class.html">PullUpDependenciesTask</a></span> 
+    <span class="category tasks cp-0 linked" title="This is part of the tasks Topic."><a href="../topics/tasks-topic.html">tasks</a></span>
+
+</dt>
+<dd>
+  This task scans the lockfile to check if dependencies should be pulled up. <a href="../dart_pre_commit/PullUpDependenciesTask-class.html">[...]</a>
+</dd>
+
+    </dl>
+  </section>
 
 
 
 
 
-  </div> <!-- /.main-content -->
-  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-    <h5>tasks Topic</h5>
-    <ol>
-    
-    
-      <li class="section-title"><a href="../topics/tasks-topic.html#classes">Classes</a></li>
-      <li><a href="../dart_pre_commit/AnalyzeTask-class.html">AnalyzeTask</a></li>
-      <li><a href="../dart_pre_commit/FixImportsTask-class.html">FixImportsTask</a></li>
-      <li><a href="../dart_pre_commit/FormatTask-class.html">FormatTask</a></li>
-      <li><a href="../dart_pre_commit/NullsafeTask-class.html">NullsafeTask</a></li>
-      <li><a href="../dart_pre_commit/OutdatedTask-class.html">OutdatedTask</a></li>
-      <li><a href="../dart_pre_commit/PullUpDependenciesTask-class.html">PullUpDependenciesTask</a></li>
-    
-    
-    
-    
-    
-    
-    </ol>
-  </div><!--/sidebar-offcanvas-right-->
+
+
+
+</div> <!-- /.main-content -->
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  <h5>tasks Topic</h5>
+  <ol>
+
+
+  <li><a href="../dart_pre_commit/AnalyzeTask-class.html">AnalyzeTask</a></li>
+  <li><a href="../dart_pre_commit/FixImportsTask-class.html">FixImportsTask</a></li>
+  <li><a href="../dart_pre_commit/FormatTask-class.html">FormatTask</a></li>
+  <li><a href="../dart_pre_commit/NullsafeTask-class.html">NullsafeTask</a></li>
+  <li><a href="../dart_pre_commit/OutdatedTask-class.html">OutdatedTask</a></li>
+  <li><a href="../dart_pre_commit/PullUpDependenciesTask-class.html">PullUpDependenciesTask</a></li>
+  <li class="section-title"><a href="../topics/tasks-topic.html#classes">Classes</a></li>
+
+
+
+
+
+
+</ol>
+
+</div>
+<!--/sidebar-offcanvas-right-->
 </main>
 
 <footer>
   <span class="no-break">
     dart_pre_commit
-      2.3.1
+      2.3.2
   </span>
 
+  
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../static-assets/typeahead.bundle.min.js"></script>
+
 <script src="../static-assets/highlight.pack.js"></script>
 <script src="../static-assets/script.js"></script>
+
 
 
 </body>
 
 </html>
+

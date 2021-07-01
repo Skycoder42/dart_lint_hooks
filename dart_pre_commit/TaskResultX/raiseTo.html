@@ -7,6 +7,7 @@
   <meta name="description" content="API docs for the raiseTo method from the TaskResultX extension, for the Dart programming language.">
   <title>raiseTo method - TaskResultX extension - dart_pre_commit library - Dart API</title>
 
+
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -15,7 +16,9 @@
   <link rel="stylesheet" href="../../static-assets/styles.css">
   <link rel="icon" href="../../static-assets/favicon.png">
 
+  
 </head>
+
 
 <body data-base-href="../../"
       data-using-base-href="false">
@@ -38,20 +41,22 @@
 
 <main>
 
+
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <header id="header-search-sidebar" class="hidden-l">
-      <form class="search-sidebar" role="search">
-        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
-      </form>
-    </header>
-    
-    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-      <li><a href="../../index.html">dart_pre_commit</a></li>
-      <li><a href="../../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
-      <li><a href="../../dart_pre_commit/TaskResultX.html">TaskResultX</a></li>
-      <li class="self-crumb">raiseTo method</li>
-    </ol>
-    
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">dart_pre_commit</a></li>
+  <li><a href="../../dart_pre_commit/dart_pre_commit-library.html">dart_pre_commit</a></li>
+  <li><a href="../../dart_pre_commit/TaskResultX.html">TaskResultX</a></li>
+  <li class="self-crumb">raiseTo method</li>
+</ol>
+
+
     <h5>TaskResultX extension</h5>
     <ol>
 
@@ -70,18 +75,24 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-main-content" class="main-content">
-      <div><h1><span class="kind-method">raiseTo</span> method     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+      <div>
+<h1><span class="kind-method">raiseTo</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
     <section class="multi-line-signature">
-      <span class="returntype"><a href="../../dart_pre_commit/TaskResult-class.html">TaskResult</a></span>
-            <span class="name ">raiseTo</span>
-(<wbr><ol class="parameter-list"><li><span class="parameter" id="raiseTo-param-target"><span class="type-annotation"><a href="../../dart_pre_commit/TaskResult-class.html">TaskResult</a></span> <span class="parameter-name">target</span></span></li>
-</ol>)
       
+
+<span class="returntype"><a href="../../dart_pre_commit/TaskResult-class.html">TaskResult</a></span>
+<span class="name ">raiseTo</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="raiseTo-param-target"><span class="type-annotation"><a href="../../dart_pre_commit/TaskResult-class.html">TaskResult</a></span> <span class="parameter-name">target</span></span></li>
+</ol>)
+
+      
+
     </section>
-    <section class="desc markdown">
-      <p>Raises the hook result to a more severe level, if required.</p>
+    
+<section class="desc markdown">
+  <p>Raises the hook result to a more severe level, if required.</p>
 <p>Compares this with <code>target</code> and returns the more severe result. The
 results severity is as according to the following table, the most severe
 result at the top:</p>
@@ -94,12 +105,15 @@ result at the top:</p>
 <pre class="language-.dart"><code class="language-.dart">TaskResult.modified.raiseTo(TaskResult.rejected)
 </code></pre>
 <p>if would return <code>TaskResult.rejected</code>.</p>
-    </section>
+</section>
+
+
     
-    <section class="summary source-code" id="source">
-      <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">TaskResult raiseTo(TaskResult target) =&gt; target.index &gt; index ? target : this;</code></pre>
-    </section>
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">TaskResult raiseTo(TaskResult target) =&gt; target.index &gt; index ? target : this;</code></pre>
+</section>
+
 
   </div> <!-- /.main-content -->
 
@@ -111,17 +125,19 @@ result at the top:</p>
 <footer>
   <span class="no-break">
     dart_pre_commit
-      2.3.1
+      2.3.2
   </span>
 
+  
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../../static-assets/typeahead.bundle.min.js"></script>
+
 <script src="../../static-assets/highlight.pack.js"></script>
 <script src="../../static-assets/script.js"></script>
+
 
 
 </body>
 
 </html>
+
